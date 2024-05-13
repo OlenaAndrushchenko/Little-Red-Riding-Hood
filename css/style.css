@@ -1,1 +1,129 @@
 @import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,500;1,500&family=Poetsen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+.poetsen-one-regular {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html, body {
+  height: 100%;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: normal;
+  color: #363029;
+}
+
+body {
+  background-image: url("../img/body-min.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+main {
+  display: flex;
+  height: 100vh;
+
+}
+
+.site-title {
+  height: 100vh;
+  display: flex;
+  display: none; /* ~!!!!!!!!!!!!!!!!!!!!!*/
+}
+
+h1 {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 96px;
+  color: #D84234;
+  text-shadow: 2px 3px 0px #2B2B26;
+  margin-inline: auto;
+  max-width: fit-content;
+  align-self: center;
+}
+
+.book-container {
+  border-radius: 30px;
+  background: #FBF9F4;
+  border-inline: 5px solid #666151;
+  max-width: 1150px;
+  padding: 30px 60px 40px 60px;
+  margin-inline: auto;
+  align-self: center;
+  position: relative;
+}
+
+.pages {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px;
+}
+
+.left-page, .right-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.page-header {
+  font-size: 14px;
+  min-height: 26px;
+  color: #726D67;
+  border-bottom: 1.5px #CAC6A0 solid;
+}
+
+.right-page .page-header {
+  text-align: right;
+}
+
+.left-page::after {
+  content: "";
+  display: flex;
+  width: 1.5px;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  /*right: -41.5px;*/
+  right: calc(-40px + -1.5px);
+  background-color: #CAC6A0;
+}
+
+img {
+  border-radius: 40px;
+  width: 100%;
+}
+
+.icon-little-red {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 25px;
+  background-color: #FBF9F4;
+  z-index: 2;
+} 
+
+.icon-little-red img {
+  max-width: 83px;
+}
