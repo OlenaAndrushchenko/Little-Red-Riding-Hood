@@ -36,12 +36,37 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* scroll-watcher */
+.scroll-watcher {
+  height: 10px;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background-color: #D84234;
+  width: 100%;
+  scale: 0 1;
+  transform-origin: left;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll();
+}
+
+@keyframes scroll-watcher {
+  to { scale: 1 1;}
 }
 
 main {
   display: flex;
-  height: 100vh;
+  flex-direction: column;
+  gap: 200px;
+}
 
+section {
+  height: 100vh;
+  display: flex;
+  align-self: center;
 }
 
 .site-title {
